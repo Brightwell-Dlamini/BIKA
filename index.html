@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIKA – Eswatini Real-Time Incident & Public Safety Platform</title>
+    <script>
+      // Immediate theme initialisation to eliminate flash on page load
+      (function() {
+        try {
+          var saved = localStorage.getItem('bika_theme');
+          if (saved === 'light') {
+            document.documentElement.classList.add('light-mode');
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light-mode');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

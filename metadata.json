@@ -1,0 +1,6 @@
+{
+  "name": "BIKA – Eswatini Real-Time Reporting Platform",
+  "description": "Eswatini Integrated Real-Time Incident, Transport & Trade Reporting Platform (See something, say something)",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

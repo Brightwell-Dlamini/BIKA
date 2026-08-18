@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   BIKA ESWATINI - LIGHT & DARK THEME UNIFIED DESIGN SYSTEM
+   ========================================================================== */
+
+/* 1. Global Defaults & Smooth Transition */
+html,
+body,
+#root {
+  background-color: #020617; /* slate-950 */
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ==========================================================================
+   2. LIGHT MODE ARCHITECTURE
+   ========================================================================== */
+
+html.light-mode,
+body.light-mode,
+.light-mode {
+  background-color: #f8fafc !important; /* slate-50 */
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Page Background & Canvas */
+.light-mode .bg-slate-950 {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Cards & Surface Containers */
+.light-mode .bg-slate-900,
+.light-mode .bg-slate-900\/95,
+.light-mode .bg-slate-900\/90,
+.light-mode .bg-slate-900\/80,
+.light-mode .bg-slate-900\/70,
+.light-mode .bg-slate-900\/60,
+.light-mode .bg-slate-900\/50,
+.light-mode .bg-slate-900\/40 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Secondary Panels & Inner Group Containers */
+.light-mode .bg-slate-800,
+.light-mode .bg-slate-800\/80,
+.light-mode .bg-slate-800\/60,
+.light-mode .bg-slate-800\/50,
+.light-mode .bg-slate-800\/40,
+.light-mode .bg-slate-800\/30 {
+  background-color: #f1f5f9 !important; /* slate-100 */
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Hover States on Slate Backgrounds */
+.light-mode .hover\:bg-slate-800:hover,
+.light-mode .hover\:bg-slate-700:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.light-mode .hover\:bg-slate-800\/50:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Borders */
+.light-mode .border-slate-800,
+.light-mode .border-slate-800\/80,
+.light-mode .border-slate-800\/60,
+.light-mode .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography Hierarchy in Light Mode */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6 {
+  color: #0f172a !important;
+}
+
+.light-mode .text-slate-400,
+.light-mode .text-slate-500 {
+  color: #64748b !important; /* slate-500 */
+}
+
+.light-mode .text-slate-300 {
+  color: #334155 !important; /* slate-700 */
+}
+
+.light-mode .text-slate-200,
+.light-mode .text-slate-100 {
+  color: #1e293b !important;
+}
+
+/* Accent Colors on Light Mode Surfaces */
+.light-mode .text-yellow-400,
+.light-mode .text-yellow-300 {
+  color: #b45309 !important; /* amber-700 */
+}
+
+.light-mode .text-emerald-400,
+.light-mode .text-emerald-300 {
+  color: #047857 !important; /* emerald-700 */
+}
+
+.light-mode .text-blue-400,
+.light-mode .text-blue-300,
+.light-mode .text-sky-400 {
+  color: #1d4ed8 !important; /* blue-700 */
+}
+
+.light-mode .text-red-400,
+.light-mode .text-red-300 {
+  color: #dc2626 !important; /* red-600 */
+}
+
+.light-mode .text-purple-400,
+.light-mode .text-purple-300 {
+  color: #7e22ce !important; /* purple-700 */
+}
+
+/* ==========================================================================
+   3. SOLID BUTTONS & HIGH-CONTRAST CONTROLS (CRITICAL CONTRAST PRESERVATION)
+   ========================================================================== */
+
+/* Solid Yellow & Amber Buttons */
+.light-mode .bg-yellow-500,
+.light-mode .bg-yellow-400,
+.light-mode .bg-amber-500 {
+  background-color: #eab308 !important;
+  color: #020617 !important;
+  border-color: #ca8a04 !important;
+}
+
+.light-mode .bg-yellow-500 *,
+.light-mode .bg-yellow-400 *,
+.light-mode .bg-amber-500 * {
+  color: #020617 !important;
+}
+
+.light-mode .bg-yellow-500:hover,
+.light-mode .bg-yellow-400:hover {
+  background-color: #ca8a04 !important;
+  color: #ffffff !important;
+}
+
+.light-mode .bg-yellow-500:hover *,
+.light-mode .bg-yellow-400:hover * {
+  color: #ffffff !important;
+}
+
+/* Solid Blue, Indigo, Purple, Emerald, Red Buttons (PRESERVE WHITE TEXT) */
+.light-mode .bg-blue-600,
+.light-mode .bg-blue-700,
+.light-mode .bg-indigo-600,
+.light-mode .bg-purple-600,
+.light-mode .bg-purple-700,
+.light-mode .bg-emerald-600,
+.light-mode .bg-emerald-700,
+.light-mode .bg-red-600,
+.light-mode .bg-red-700 {
+  color: #ffffff !important;
+}
+
+.light-mode .bg-blue-600 *,
+.light-mode .bg-blue-700 *,
+.light-mode .bg-indigo-600 *,
+.light-mode .bg-purple-600 *,
+.light-mode .bg-purple-700 *,
+.light-mode .bg-emerald-600 *,
+.light-mode .bg-emerald-700 *,
+.light-mode .bg-red-600 *,
+.light-mode .bg-red-700 * {
+  color: #ffffff !important;
+}
+
+/* Top National Alert Strip & Official Headers */
+.light-mode header .bg-gradient-to-r {
+  background-image: linear-gradient(to right, #b45309, #047857, #1d4ed8) !important;
+  color: #ffffff !important;
+}
+
+.light-mode header .bg-gradient-to-r * {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   4. TRANSLUCENT STATUS PILLS & BADGES
+   ========================================================================== */
+
+.light-mode .bg-yellow-500\/20,
+.light-mode .bg-yellow-500\/10,
+.light-mode .bg-amber-500\/20,
+.light-mode .bg-amber-500\/10 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+.light-mode .bg-emerald-500\/20,
+.light-mode .bg-emerald-500\/10,
+.light-mode .bg-emerald-600\/20 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.light-mode .bg-blue-500\/20,
+.light-mode .bg-blue-500\/10 {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-color: #bfdbfe !important;
+}
+
+.light-mode .bg-red-500\/20,
+.light-mode .bg-red-500\/10 {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  border-color: #fecaca !important;
+}
+
+.light-mode .bg-purple-500\/20,
+.light-mode .bg-purple-500\/10 {
+  background-color: #f3e8ff !important;
+  color: #581c87 !important;
+  border-color: #e9d5ff !important;
+}
+
+/* ==========================================================================
+   5. FORM CONTROLS, INPUTS, AND TABLES
+   ========================================================================== */
+
+.light-mode input,
+.light-mode select,
+.light-mode textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode input:focus,
+.light-mode select:focus,
+.light-mode textarea:focus {
+  border-color: #eab308 !important;
+  outline: 2px solid rgba(234, 179, 8, 0.2) !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light-mode table {
+  color: #0f172a !important;
+}
+
+.light-mode thead,
+.light-mode th {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  font-weight: 800 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   6. MODALS & POPUPS
+   ========================================================================== */
+
+.light-mode .fixed.inset-0 {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.light-mode .fixed .bg-slate-900,
+.light-mode .fixed .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ==========================================================================
+   7. PRINT MEDIA STYLES
+   ========================================================================== */
+
+@media print {
+  header,
+  nav,
+  footer,
+  aside,
+  .no-print,
+  button {
+    display: none !important;
+  }
+
+  body,
+  #root,
+  main {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #printable-poster {
+    box-shadow: none !important;
+    border: 4px solid #eab308 !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+  }
+}
